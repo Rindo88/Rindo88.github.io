@@ -1,0 +1,317 @@
+:root{
+  --mainColor:#121A25;
+  --contentMain:#293443;
+  --contentHover:#4087ea;
+  --colorText:#fff;
+  --hoverContent:#4389ec ; 
+}
+
+body{
+  background-color:var(--mainColor)!important;
+  font-family: 'Ubuntu' !important;
+}
+
+.main-bg {
+  background-color: var(--contentHover) !important;
+}
+
+section h1{
+  color: var(--colorText);
+  font-size: 2.5rem;
+}
+
+.content-hover:hover{
+  color: var(--hoverContent);
+  scale: 1.1;
+  
+}
+
+/* Navbar */
+.nav-link.active{
+  color: var(--contentHover)!important;
+  font-weight: 700 ;
+  scale: 1.2;
+}
+/* end navbar */
+
+/* hero*/
+.color-acsent{
+  color: var(--contentHover);
+}
+
+/* typejs */
+.typed-cursor {
+  opacity: 1;
+  animation: blink 0.7s infinite;
+  -webkit-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#hero{
+  color: var(--colorText);
+  min-height: 70vh;
+  margin-top: 100px;
+  /* margin-bottom: 100px; */
+}
+#hero h1{
+  font-size: 3rem;
+}
+#hero h2{
+  font-weight: 300;
+}
+#hero p{
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+/* btn */
+.btn-custom1{
+  background-color: var(--contentHover)!important;
+  text-align: center;
+  color: var(--colorText)!important;
+  min-width: 150px;
+  height: 45px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 40px;
+}
+
+.btn-custom1:hover{
+  box-shadow: 0 0 5px rgba(255, 166,0, 8);
+}
+.cv{
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.social-icon a svg{
+  margin-right: .7em;
+  margin-bottom: 10px;
+}
+
+.social-icon-footer a svg{
+  margin-right: .7em;
+  margin-bottom: 10px;
+}
+/* end hero */
+
+
+/* abbout start */
+.head hr{
+  width: 35%;
+  height: 5px;
+  color: var(--contentHover);
+  margin: 0 auto;
+  opacity: 100%;
+}
+
+#about{
+  min-height: 300px;  
+  width: 100%;
+  background-color: var(--mainColor);
+  color: var(--colorText);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-bottom: 80px;
+}
+
+.border-custom {
+  border: 1px solid #4389ec !important;
+}
+
+.mt-custom {
+  margin-top: 140px !important;
+}
+/* about end */
+
+/* start skill */
+#skill{
+  min-height: 600px;
+  width: 100%;
+  color: var(--colorText);
+}
+
+#skill .card{
+  background-color: var(--contentMain);
+  height: 350px;
+}
+
+/* start skill  */
+.slider {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 20px 0;
+}
+.slider .track {
+  display: flex;
+  gap: 100px; /* Jarak antar logo */
+  animation: scroll 15s linear infinite;
+}
+.slider img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain; /* Memastikan gambar sesuai dalam ukuran */
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, animation-play-state 0.3s ease;
+}
+.slider img:hover {
+  filter: grayscale(0%);
+  animation-play-state: paused;
+}
+@keyframes scroll {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+  
+/* end skill */
+
+
+/* start portofolio */
+#portofolio .container {
+  padding: 50px 10px;
+}
+
+#portofolio .hover-effect {
+  position: relative;
+  overflow: hidden;
+  max-width: 500px; /* Lebar card diperbesar */
+  margin: 0 auto;
+}
+
+#portofolio .col-md-6 {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+#portofolio .card {
+  height: auto; /* Tinggi card dibuat lebih pendek */
+  width: 500px; /* Lebar card diperbesar */
+}
+
+#portofolio .card h5{
+margin-top: 10px;
+margin-bottom: 20px;
+}
+
+#portofolio .card img {
+  height: 250px; /* Mengatur tinggi gambar */
+  object-fit: cover; /* Memastikan gambar menutupi area dengan baik */
+}
+
+#portofolio .card-body {
+  padding: 15px; /* Mengurangi padding agar konten tidak terlalu renggang */
+}
+
+/* Tombol awalnya disembunyikan */
+#portofolio .hover-effect .btn-custom1 {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-top: 10px;
+}
+
+/* Hover effect: tombol muncul saat hover */
+#portofolio .hover-effect:hover .btn-custom1 {
+  opacity: 1;
+}
+
+/* Media query untuk layar yang lebih kecil */
+@media (max-width: 767px) {
+  #portofolio .col-md-6 {
+    margin-bottom: 20px;
+  }
+  
+  #portofolio .hover-effect {
+    max-width: 300px;
+  }
+  
+  #portofolio .card {
+    width: 300px;
+    height: auto; /* Biarkan tinggi menyesuaikan konten pada mobile */
+  }
+  
+  #portofolio .card img {
+    height: 120px;
+  }
+}
+/* end portofolio */
+
+
+/* card */
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden !important;
+  }
+
+#skill h3 {
+  font-size: 20px !important;
+}
+
+#skill p {
+  font-size: 13px !important;
+}
+
+#skill svg {
+  margin-top: 60px !important;
+  width:150px !important;
+}
+
+#hero p {
+  font-size: 20px !important;
+}
+
+
+
+#skill .card, #project .card {
+  margin-bottom: 20px !important;
+}
+  h1 {
+    font-size: 30px !important;
+  }
+
+  .hero-text {
+    order: 2 !important;
+  }
+
+  #about .card {
+    width: 20rem !important;
+    font-size: 15px !important;
+    order: 1 !important;
+  }
+
+  .abt-text {
+    order: 2 !important;
+    margin-top: 13px !important;
+    font-size: 15px !important;
+  }
+}
+.cardkiri{
+  background-color: var(--contentMain)!important;
+}
+  #hero {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .hero-img {
+    order: 1 !important;
+    margin-bottom: 20px !important;
+  }
+  
